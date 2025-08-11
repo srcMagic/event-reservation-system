@@ -27,7 +27,7 @@ public class UserController {
     }
 
     @GetMapping("/page")
-    @Operation(summary = "Restituisce tutti gli utenti con paginazione")
+    @Operation(summary = "Restituisce tutti gli utenti con paginazione e ordinamento")
     public ResponseEntity<Page<UserResponseDto>> getAllUsers(@RequestParam(defaultValue = "0") Integer page,
                                                              @RequestParam(defaultValue = "10") Integer size,
                                                              @RequestParam(defaultValue = "id") String sortBy,
